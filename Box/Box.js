@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.styleFunction = void 0;
 
-var _system = require("@material-ui/system");
+var _system = require("@qodev/system");
 
 var _styled = _interopRequireDefault(require("../styles/styled"));
 

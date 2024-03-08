@@ -1,4 +1,4 @@
-import { createUnarySpacing } from '@material-ui/system';
+import { createUnarySpacing } from '@qodev/system';
 var warnOnce;
 export default function createSpacing() {
   var spacingInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;

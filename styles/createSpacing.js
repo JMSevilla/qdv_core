@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = createSpacing;
 
-var _system = require("@material-ui/system");
+var _system = require("@qodev/system");
 
 var warnOnce;
 

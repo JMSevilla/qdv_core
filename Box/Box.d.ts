@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   borders,
   ComposedStyleFunction,
@@ -12,8 +12,8 @@ import {
   spacing,
   typography,
   PropsFor,
-} from '@material-ui/system';
-import { Omit } from '..';
+} from "@qodev/system";
+import { Omit } from "..";
 
 type BoxStyleFunction = ComposedStyleFunction<
   [
