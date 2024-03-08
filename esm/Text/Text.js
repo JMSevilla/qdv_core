@@ -12,35 +12,35 @@ export var styles = function styles(theme) {
       margin: 0
     },
 
-    /* Styles applied to the root element if `variant="default2"`. */
-    default2: theme.text.body2,
+    /* Styles applied to the root element if `variant="body2"`. */
+    default2: theme.text.default2,
 
-    /* Styles applied to the root element if `variant="default1"`. */
-    default1: theme.text.body1,
+    /* Styles applied to the root element if `variant="body1"`. */
+    default1: theme.text.default1,
 
     /* Styles applied to the root element if `variant="caption"`. */
     caption: theme.text.caption,
 
-    /* Styles applied to the root element if `variant="rock"`. */
-    rock: theme.text.button,
+    /* Styles applied to the root element if `variant="button"`. */
+    button: theme.text.button,
 
-    /* Styles applied to the root element if `variant="header1"`. */
-    header1: theme.text.h1,
+    /* Styles applied to the root element if `variant="h1"`. */
+    h1: theme.text.h1,
 
-    /* Styles applied to the root element if `variant="header2"`. */
-    header2: theme.text.h2,
+    /* Styles applied to the root element if `variant="h2"`. */
+    h2: theme.text.h2,
 
-    /* Styles applied to the root element if `variant="header3"`. */
-    header3: theme.text.h3,
+    /* Styles applied to the root element if `variant="h3"`. */
+    h3: theme.text.h3,
 
-    /* Styles applied to the root element if `variant="header4"`. */
-    header4: theme.text.h4,
+    /* Styles applied to the root element if `variant="h4"`. */
+    h4: theme.text.h4,
 
-    /* Styles applied to the root element if `variant="header5"`. */
-    header5: theme.text.h5,
+    /* Styles applied to the root element if `variant="h5"`. */
+    h5: theme.text.h5,
 
-    /* Styles applied to the root element if `variant="header6"`. */
-    header6: theme.text.h6,
+    /* Styles applied to the root element if `variant="h6"`. */
+    h6: theme.text.h6,
 
     /* Styles applied to the root element if `variant="subtitle1"`. */
     subtitle1: theme.text.subtitle1,
@@ -138,16 +138,16 @@ export var styles = function styles(theme) {
   };
 };
 var defaultDesignMapping = {
-  header1: 'h1',
-  header2: 'h2',
-  header3: 'h3',
-  header4: 'h4',
-  header5: 'h5',
-  header6: 'h6',
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
-  body1: 'p',
-  body2: 'p'
+  default1: 'p',
+  default2: 'p'
 };
 var Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   var _props$align = props.align,
@@ -239,7 +239,7 @@ process.env.NODE_ENV !== "production" ? Text.propTypes = {
   /**
    * Applies the theme text styles.
    */
-  design: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
+  design: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'default1', 'default2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
 
   /**
    * The component maps the design prop to a range of different HTML element types.

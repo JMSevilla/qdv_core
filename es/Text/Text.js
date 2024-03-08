@@ -6,49 +6,49 @@ import clsx from 'clsx';
 import withStyles from '../styles/withStyles';
 import capitalize from '../utils/capitalize';
 export const styles = theme => ({
-   /* Styles applied to the root element. */
-   root: {
-    margin: 0
-  },
+ /* Styles applied to the root element. */
+ root: {
+  margin: 0
+},
 
-  /* Styles applied to the root element if `variant="default2"`. */
-  default2: theme.text.body2,
+/* Styles applied to the root element if `variant="body2"`. */
+body2: theme.text.body2,
 
-  /* Styles applied to the root element if `variant="default1"`. */
-  default1: theme.text.body1,
+/* Styles applied to the root element if `variant="body1"`. */
+body1: theme.text.body1,
 
-  /* Styles applied to the root element if `variant="caption"`. */
-  caption: theme.text.caption,
+/* Styles applied to the root element if `variant="caption"`. */
+caption: theme.text.caption,
 
-  /* Styles applied to the root element if `variant="rock"`. */
-  rock: theme.text.button,
+/* Styles applied to the root element if `variant="button"`. */
+button: theme.text.button,
 
-  /* Styles applied to the root element if `variant="header1"`. */
-  header1: theme.text.h1,
+/* Styles applied to the root element if `variant="h1"`. */
+h1: theme.text.h1,
 
-  /* Styles applied to the root element if `variant="header2"`. */
-  header2: theme.text.h2,
+/* Styles applied to the root element if `variant="h2"`. */
+h2: theme.text.h2,
 
-  /* Styles applied to the root element if `variant="header3"`. */
-  header3: theme.text.h3,
+/* Styles applied to the root element if `variant="h3"`. */
+h3: theme.text.h3,
 
-  /* Styles applied to the root element if `variant="header4"`. */
-  header4: theme.text.h4,
+/* Styles applied to the root element if `variant="h4"`. */
+h4: theme.text.h4,
 
-  /* Styles applied to the root element if `variant="header5"`. */
-  header5: theme.text.h5,
+/* Styles applied to the root element if `variant="h5"`. */
+h5: theme.text.h5,
 
-  /* Styles applied to the root element if `variant="header6"`. */
-  header6: theme.text.h6,
+/* Styles applied to the root element if `variant="h6"`. */
+h6: theme.text.h6,
 
-  /* Styles applied to the root element if `variant="subtitle1"`. */
-  subtitle1: theme.text.subtitle1,
+/* Styles applied to the root element if `variant="subtitle1"`. */
+subtitle1: theme.text.subtitle1,
 
-  /* Styles applied to the root element if `variant="subtitle2"`. */
-  subtitle2: theme.text.subtitle2,
+/* Styles applied to the root element if `variant="subtitle2"`. */
+subtitle2: theme.text.subtitle2,
 
-  /* Styles applied to the root element if `variant="overline"`. */
-  overline: theme.text.overline,
+/* Styles applied to the root element if `variant="overline"`. */
+overline: theme.text.overline,
 
   /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
   srOnly: {
@@ -136,16 +136,16 @@ export const styles = theme => ({
   }
 });
 const defaultDesignMapping = {
-  header1: 'h1',
-  header2: 'h2',
-  header3: 'h3',
-  header4: 'h4',
-  header5: 'h5',
-  header6: 'h6',
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
-  body1: 'p',
-  body2: 'p'
+  default1: 'p',
+  default2: 'p'
 };
 const Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   const {
