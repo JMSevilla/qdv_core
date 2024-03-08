@@ -12,43 +12,43 @@ export const styles = theme => ({
 },
 
 /* Styles applied to the root element if `variant="body2"`. */
-body2: theme.text.body2,
+body2: theme.typography.body2,
 
 /* Styles applied to the root element if `variant="body1"`. */
-body1: theme.text.body1,
+body1: theme.typography.body1,
 
 /* Styles applied to the root element if `variant="caption"`. */
-caption: theme.text.caption,
+caption: theme.typography.caption,
 
 /* Styles applied to the root element if `variant="button"`. */
-button: theme.text.button,
+button: theme.typography.button,
 
 /* Styles applied to the root element if `variant="h1"`. */
-h1: theme.text.h1,
+h1: theme.typography.h1,
 
 /* Styles applied to the root element if `variant="h2"`. */
-h2: theme.text.h2,
+h2: theme.typography.h2,
 
 /* Styles applied to the root element if `variant="h3"`. */
-h3: theme.text.h3,
+h3: theme.typography.h3,
 
 /* Styles applied to the root element if `variant="h4"`. */
-h4: theme.text.h4,
+h4: theme.typography.h4,
 
 /* Styles applied to the root element if `variant="h5"`. */
-h5: theme.text.h5,
+h5: theme.typography.h5,
 
 /* Styles applied to the root element if `variant="h6"`. */
-h6: theme.text.h6,
+h6: theme.typography.h6,
 
 /* Styles applied to the root element if `variant="subtitle1"`. */
-subtitle1: theme.text.subtitle1,
+subtitle1: theme.typography.subtitle1,
 
 /* Styles applied to the root element if `variant="subtitle2"`. */
-subtitle2: theme.text.subtitle2,
+subtitle2: theme.typography.subtitle2,
 
 /* Styles applied to the root element if `variant="overline"`. */
-overline: theme.text.overline,
+overline: theme.typography.overline,
 
   /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
   srOnly: {

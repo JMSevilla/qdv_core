@@ -25,49 +25,49 @@ var _capitalize = _interopRequireDefault(require("../utils/capitalize"));
 
 var styles = function styles(theme) {
   return {
-    /* Styles applied to the root element. */
-    root: {
+     /* Styles applied to the root element. */
+     root: {
       margin: 0
     },
 
-    /* Styles applied to the root element if `design="default2"`. */
-    default2: theme.text.default2,
+    /* Styles applied to the root element if `variant="body2"`. */
+    body2: theme.typography.body2,
 
-    /* Styles applied to the root element if `design="default1"`. */
-    default1: theme.text.default1,
+    /* Styles applied to the root element if `variant="body1"`. */
+    body1: theme.typography.body1,
 
-    /* Styles applied to the root element if `design="caption"`. */
-    caption: theme.text.caption,
+    /* Styles applied to the root element if `variant="caption"`. */
+    caption: theme.typography.caption,
 
-    /* Styles applied to the root element if `design="rock"`. */
-    rock: theme.text.rock,
+    /* Styles applied to the root element if `variant="button"`. */
+    button: theme.typography.button,
 
-    /* Styles applied to the root element if `design="header1"`. */
-    header1: theme.text.header1,
+    /* Styles applied to the root element if `variant="h1"`. */
+    h1: theme.typography.h1,
 
-    /* Styles applied to the root element if `design="header2"`. */
-    header2: theme.text.header2,
+    /* Styles applied to the root element if `variant="h2"`. */
+    h2: theme.typography.h2,
 
-    /* Styles applied to the root element if `design="header3"`. */
-    header3: theme.text.header3,
+    /* Styles applied to the root element if `variant="h3"`. */
+    h3: theme.typography.h3,
 
-    /* Styles applied to the root element if `design="header4"`. */
-    header4: theme.text.header4,
+    /* Styles applied to the root element if `variant="h4"`. */
+    h4: theme.typography.h4,
 
-    /* Styles applied to the root element if `design="header5"`. */
-    header5: theme.text.header5,
+    /* Styles applied to the root element if `variant="h5"`. */
+    h5: theme.typography.h5,
 
-    /* Styles applied to the root element if `design="header6"`. */
-    header6: theme.text.header6,
+    /* Styles applied to the root element if `variant="h6"`. */
+    h6: theme.typography.h6,
 
-    /* Styles applied to the root element if `design="subtitle1"`. */
-    subtitle1: theme.text.subtitle1,
+    /* Styles applied to the root element if `variant="subtitle1"`. */
+    subtitle1: theme.typography.subtitle1,
 
-    /* Styles applied to the root element if `design="subtitle2"`. */
-    subtitle2: theme.text.subtitle2,
+    /* Styles applied to the root element if `variant="subtitle2"`. */
+    subtitle2: theme.typography.subtitle2,
 
-    /* Styles applied to the root element if `design="overline"`. */
-    overline: theme.text.overline,
+    /* Styles applied to the root element if `variant="overline"`. */
+    overline: theme.typography.overline,
 
     /* Styles applied to the root element if `design="srOnly"`. Only accessible to screen readers. */
     srOnly: {
@@ -158,16 +158,16 @@ var styles = function styles(theme) {
 
 exports.styles = styles;
 var defaultDesignMapping = {
-  header1: 'header1',
-  header2: 'header2',
-  header3: 'header3',
-  header4: 'header4',
-  header5: 'header5',
-  header6: 'header6',
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
-  default1: 'p',
-  default2: 'p'
+  body1: 'p',
+  body2: 'p'
 };
 var Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   var _props$align = props.align,
