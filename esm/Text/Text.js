@@ -12,44 +12,44 @@ export var styles = function styles(theme) {
       margin: 0
     },
 
-    /* Styles applied to the root element if `variant="body2"`. */
-    body2: theme.typography.body2,
+    /* Styles applied to the root element if `variant="default2"`. */
+    default2: theme.text.body2,
 
-    /* Styles applied to the root element if `variant="body1"`. */
-    body1: theme.typography.body1,
+    /* Styles applied to the root element if `variant="default1"`. */
+    default1: theme.text.body1,
 
     /* Styles applied to the root element if `variant="caption"`. */
-    caption: theme.typography.caption,
+    caption: theme.text.caption,
 
-    /* Styles applied to the root element if `variant="button"`. */
-    button: theme.typography.button,
+    /* Styles applied to the root element if `variant="rock"`. */
+    rock: theme.text.button,
 
-    /* Styles applied to the root element if `variant="h1"`. */
-    h1: theme.typography.h1,
+    /* Styles applied to the root element if `variant="header1"`. */
+    header1: theme.text.h1,
 
-    /* Styles applied to the root element if `variant="h2"`. */
-    h2: theme.typography.h2,
+    /* Styles applied to the root element if `variant="header2"`. */
+    header2: theme.text.h2,
 
-    /* Styles applied to the root element if `variant="h3"`. */
-    h3: theme.typography.h3,
+    /* Styles applied to the root element if `variant="header3"`. */
+    header3: theme.text.h3,
 
-    /* Styles applied to the root element if `variant="h4"`. */
-    h4: theme.typography.h4,
+    /* Styles applied to the root element if `variant="header4"`. */
+    header4: theme.text.h4,
 
-    /* Styles applied to the root element if `variant="h5"`. */
-    h5: theme.typography.h5,
+    /* Styles applied to the root element if `variant="header5"`. */
+    header5: theme.text.h5,
 
-    /* Styles applied to the root element if `variant="h6"`. */
-    h6: theme.typography.h6,
+    /* Styles applied to the root element if `variant="header6"`. */
+    header6: theme.text.h6,
 
     /* Styles applied to the root element if `variant="subtitle1"`. */
-    subtitle1: theme.typography.subtitle1,
+    subtitle1: theme.text.subtitle1,
 
     /* Styles applied to the root element if `variant="subtitle2"`. */
-    subtitle2: theme.typography.subtitle2,
+    subtitle2: theme.text.subtitle2,
 
     /* Styles applied to the root element if `variant="overline"`. */
-    overline: theme.typography.overline,
+    overline: theme.text.overline,
 
     /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
     srOnly: {
@@ -137,19 +137,19 @@ export var styles = function styles(theme) {
     }
   };
 };
-var defaultVariantMapping = {
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-  h5: 'h5',
-  h6: 'h6',
+var defaultDesignMapping = {
+  header1: 'h1',
+  header2: 'h2',
+  header3: 'h3',
+  header4: 'h4',
+  header5: 'h5',
+  header6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
   body1: 'p',
   body2: 'p'
 };
-var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
+var Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   var _props$align = props.align,
       align = _props$align === void 0 ? 'inherit' : _props$align,
       classes = props.classes,
@@ -165,19 +165,19 @@ var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
       noWrap = _props$noWrap === void 0 ? false : _props$noWrap,
       _props$paragraph = props.paragraph,
       paragraph = _props$paragraph === void 0 ? false : _props$paragraph,
-      _props$variant = props.variant,
-      variant = _props$variant === void 0 ? 'body1' : _props$variant,
-      _props$variantMapping = props.variantMapping,
-      variantMapping = _props$variantMapping === void 0 ? defaultVariantMapping : _props$variantMapping,
-      other = _objectWithoutProperties(props, ["align", "classes", "className", "color", "component", "display", "spaceBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
+      _props$design = props.design,
+      design = _props$design === void 0 ? 'body1' : _props$design,
+      _props$designMapping = props.designMapping,
+      designMapping = _props$designMapping === void 0 ? defaultDesignMapping : _props$designMapping,
+      other = _objectWithoutProperties(props, ["align", "classes", "className", "color", "component", "display", "spaceBottom", "noWrap", "paragraph", "design", "designMapping"]);
 
-  var Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
+  var Component = component || (paragraph ? 'p' : designMapping[design] || defaultDesignMapping[variant]) || 'span';
   return /*#__PURE__*/React.createElement(Component, _extends({
-    className: clsx(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat(capitalize(color))], noWrap && classes.noWrap, spaceBottom && classes.spaceBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(capitalize(align))], display !== 'initial' && classes["display".concat(capitalize(display))]),
+    className: clsx(classes.root, className, design !== 'inherit' && classes[design], color !== 'initial' && classes["color".concat(capitalize(color))], noWrap && classes.noWrap, spaceBottom && classes.spaceBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(capitalize(align))], display !== 'initial' && classes["display".concat(capitalize(display))]),
     ref: ref
   }, other));
 });
-process.env.NODE_ENV !== "production" ? Typography.propTypes = {
+process.env.NODE_ENV !== "production" ? Text.propTypes = {
   /**
    * Set the text-align on the component.
    */
@@ -207,7 +207,7 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
   /**
    * The component used for the root node.
    * Either a string to use a HTML element or a component.
-   * Overrides the behavior of the `variantMapping` prop.
+   * Overrides the behavior of the `designMapping` prop.
    */
   component: PropTypes
   /* @typescript-to-proptypes-ignore */
@@ -237,18 +237,18 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
   paragraph: PropTypes.bool,
 
   /**
-   * Applies the theme typography styles.
+   * Applies the theme text styles.
    */
-  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
+  design: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
 
   /**
-   * The component maps the variant prop to a range of different HTML element types.
+   * The component maps the design prop to a range of different HTML element types.
    * For instance, subtitle1 to `<h6>`.
    * If you wish to change that mapping, you can provide your own.
    * Alternatively, you can use the `component` prop.
    */
-  variantMapping: PropTypes.object
+  designMapping: PropTypes.object
 } : void 0;
 export default withStyles(styles, {
-  name: 'MuiTypography'
-})(Typography);
+  name: 'QdvText'
+})(Text);
