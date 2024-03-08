@@ -12,46 +12,46 @@ export var styles = function styles(theme) {
       margin: 0
     },
 
-    /* Styles applied to the root element if `variant="body2"`. */
+    /* Styles applied to the root element if `design="body2"`. */
     body2: theme.typography.body2,
 
-    /* Styles applied to the root element if `variant="body1"`. */
+    /* Styles applied to the root element if `design="body1"`. */
     body1: theme.typography.body1,
 
-    /* Styles applied to the root element if `variant="caption"`. */
+    /* Styles applied to the root element if `design="caption"`. */
     caption: theme.typography.caption,
 
-    /* Styles applied to the root element if `variant="button"`. */
+    /* Styles applied to the root element if `design="button"`. */
     button: theme.typography.button,
 
-    /* Styles applied to the root element if `variant="h1"`. */
+    /* Styles applied to the root element if `design="h1"`. */
     h1: theme.typography.h1,
 
-    /* Styles applied to the root element if `variant="h2"`. */
+    /* Styles applied to the root element if `design="h2"`. */
     h2: theme.typography.h2,
 
-    /* Styles applied to the root element if `variant="h3"`. */
+    /* Styles applied to the root element if `design="h3"`. */
     h3: theme.typography.h3,
 
-    /* Styles applied to the root element if `variant="h4"`. */
+    /* Styles applied to the root element if `design="h4"`. */
     h4: theme.typography.h4,
 
-    /* Styles applied to the root element if `variant="h5"`. */
+    /* Styles applied to the root element if `design="h5"`. */
     h5: theme.typography.h5,
 
-    /* Styles applied to the root element if `variant="h6"`. */
+    /* Styles applied to the root element if `design="h6"`. */
     h6: theme.typography.h6,
 
-    /* Styles applied to the root element if `variant="subtitle1"`. */
+    /* Styles applied to the root element if `design="subtitle1"`. */
     subtitle1: theme.typography.subtitle1,
 
-    /* Styles applied to the root element if `variant="subtitle2"`. */
+    /* Styles applied to the root element if `design="subtitle2"`. */
     subtitle2: theme.typography.subtitle2,
 
-    /* Styles applied to the root element if `variant="overline"`. */
+    /* Styles applied to the root element if `design="overline"`. */
     overline: theme.typography.overline,
 
-    /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
+    /* Styles applied to the root element if `design="srOnly"`. Only accessible to screen readers. */
     srOnly: {
       position: 'absolute',
       height: 1,
@@ -171,7 +171,7 @@ var Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
       designMapping = _props$designMapping === void 0 ? defaultDesignMapping : _props$designMapping,
       other = _objectWithoutProperties(props, ["align", "classes", "className", "color", "component", "display", "spaceBottom", "noWrap", "paragraph", "design", "designMapping"]);
 
-  var Component = component || (paragraph ? 'p' : designMapping[design] || defaultDesignMapping[variant]) || 'span';
+  var Component = component || (paragraph ? 'p' : designMapping[design] || defaultDesignMapping[design]) || 'span';
   return /*#__PURE__*/React.createElement(Component, _extends({
     className: clsx(classes.root, className, design !== 'inherit' && classes[design], color !== 'initial' && classes["color".concat(capitalize(color))], noWrap && classes.noWrap, spaceBottom && classes.spaceBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(capitalize(align))], display !== 'initial' && classes["display".concat(capitalize(display))]),
     ref: ref
