@@ -3,18 +3,18 @@ import * as React from "react";
 import { CSSProperties } from "./withStyles";
 
 export type Design =
-  | "header1"
-  | "header2"
-  | "header3"
-  | "header4"
-  | "header5"
-  | "header6"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6"
   | "subtitle1"
   | "subtitle2"
-  | "default1"
-  | "default2"
+  | "body1"
+  | "body2"
   | "caption"
-  | "rock"
+  | "button"
   | "overline";
 
 export interface FontStyle
