@@ -1,4 +1,4 @@
-import { TypographyProps } from "../Typography";
+import { TypographyProps } from "../Text";
 
 export type ComponentsProps = {
   [Name in keyof ComponentsPropsList]?: Partial<ComponentsPropsList[Name]>;

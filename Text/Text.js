@@ -31,43 +31,43 @@ var styles = function styles(theme) {
     },
 
     /* Styles applied to the root element if `variant="body2"`. */
-    body2: theme.typography.body2,
+    body2: theme.text.body2,
 
     /* Styles applied to the root element if `variant="body1"`. */
-    body1: theme.typography.body1,
+    body1: theme.text.body1,
 
     /* Styles applied to the root element if `variant="caption"`. */
-    caption: theme.typography.caption,
+    caption: theme.text.caption,
 
     /* Styles applied to the root element if `variant="button"`. */
-    button: theme.typography.button,
+    button: theme.text.button,
 
     /* Styles applied to the root element if `variant="h1"`. */
-    h1: theme.typography.h1,
+    h1: theme.text.h1,
 
     /* Styles applied to the root element if `variant="h2"`. */
-    h2: theme.typography.h2,
+    h2: theme.text.h2,
 
     /* Styles applied to the root element if `variant="h3"`. */
-    h3: theme.typography.h3,
+    h3: theme.text.h3,
 
     /* Styles applied to the root element if `variant="h4"`. */
-    h4: theme.typography.h4,
+    h4: theme.text.h4,
 
     /* Styles applied to the root element if `variant="h5"`. */
-    h5: theme.typography.h5,
+    h5: theme.text.h5,
 
     /* Styles applied to the root element if `variant="h6"`. */
-    h6: theme.typography.h6,
+    h6: theme.text.h6,
 
     /* Styles applied to the root element if `variant="subtitle1"`. */
-    subtitle1: theme.typography.subtitle1,
+    subtitle1: theme.text.subtitle1,
 
     /* Styles applied to the root element if `variant="subtitle2"`. */
-    subtitle2: theme.typography.subtitle2,
+    subtitle2: theme.text.subtitle2,
 
     /* Styles applied to the root element if `variant="overline"`. */
-    overline: theme.typography.overline,
+    overline: theme.text.overline,
 
     /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
     srOnly: {
@@ -104,8 +104,8 @@ var styles = function styles(theme) {
       whiteSpace: 'nowrap'
     },
 
-    /* Styles applied to the root element if `gutterBottom={true}`. */
-    gutterBottom: {
+    /* Styles applied to the root element if `spaceBottom={true}`. */
+    spaceBottom: {
       marginBottom: '0.35em'
     },
 
@@ -169,7 +169,7 @@ var defaultVariantMapping = {
   body1: 'p',
   body2: 'p'
 };
-var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
+var Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   var _props$align = props.align,
       align = _props$align === void 0 ? 'inherit' : _props$align,
       classes = props.classes,
@@ -179,8 +179,8 @@ var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
       component = props.component,
       _props$display = props.display,
       display = _props$display === void 0 ? 'initial' : _props$display,
-      _props$gutterBottom = props.gutterBottom,
-      gutterBottom = _props$gutterBottom === void 0 ? false : _props$gutterBottom,
+      _props$spaceBottom = props.spaceBottom,
+      spaceBottom = _props$spaceBottom === void 0 ? false : _props$spaceBottom,
       _props$noWrap = props.noWrap,
       noWrap = _props$noWrap === void 0 ? false : _props$noWrap,
       _props$paragraph = props.paragraph,
@@ -189,14 +189,14 @@ var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
       variant = _props$variant === void 0 ? 'body1' : _props$variant,
       _props$variantMapping = props.variantMapping,
       variantMapping = _props$variantMapping === void 0 ? defaultVariantMapping : _props$variantMapping,
-      other = (0, _objectWithoutProperties2.default)(props, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
+      other = (0, _objectWithoutProperties2.default)(props, ["align", "classes", "className", "color", "component", "display", "spaceBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
   var Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
   return /*#__PURE__*/React.createElement(Component, (0, _extends2.default)({
-    className: (0, _clsx.default)(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat((0, _capitalize.default)(color))], noWrap && classes.noWrap, gutterBottom && classes.gutterBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat((0, _capitalize.default)(align))], display !== 'initial' && classes["display".concat((0, _capitalize.default)(display))]),
+    className: (0, _clsx.default)(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat((0, _capitalize.default)(color))], noWrap && classes.noWrap, spaceBottom && classes.spaceBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat((0, _capitalize.default)(align))], display !== 'initial' && classes["display".concat((0, _capitalize.default)(display))]),
     ref: ref
   }, other));
 });
-process.env.NODE_ENV !== "production" ? Typography.propTypes = {
+process.env.NODE_ENV !== "production" ? Text.propTypes = {
   /**
    * Set the text-align on the component.
    */
@@ -240,7 +240,7 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
   /**
    * If `true`, the text will have a bottom margin.
    */
-  gutterBottom: _propTypes.default.bool,
+  spaceBottom: _propTypes.default.bool,
 
   /**
    * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
@@ -255,9 +255,6 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
    */
   paragraph: _propTypes.default.bool,
 
-  /**
-   * Applies the theme typography styles.
-   */
   variant: _propTypes.default.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
 
   /**
@@ -270,7 +267,7 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
 } : void 0;
 
 var _default = (0, _withStyles.default)(styles, {
-  name: 'MuiTypography'
-})(Typography);
+  name: 'QdvText'
+})(Text);
 
 exports.default = _default;

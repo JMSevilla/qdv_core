@@ -1,6 +1,6 @@
-import { Theme } from './createTheme';
-import { Breakpoint } from './createBreakpoints';
-import { Variant } from './createTypography';
+import { Theme } from "./createTheme";
+import { Breakpoint } from "./createBreakpoints";
+import { Variant } from "./createText";
 
 export interface ResponsiveFontSizesOptions {
   breakpoints?: Breakpoint[];

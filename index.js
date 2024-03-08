@@ -8,18 +8,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 var _exportNames = {
   colors: true,
-  Typography: true,
+  Text: true,
 };
 
-var _Typography = _interopRequireWildcard(require("./Typography"));
+var _Text = _interopRequireWildcard(require("./Text"));
 
-Object.keys(_Typography).forEach(function (key) {
+Object.keys(_Text).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {
-      return _Typography[key];
+      return _Text[key];
     }
   });
 });

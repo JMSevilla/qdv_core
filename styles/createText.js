@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = createTypography;
+exports.default = createText;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -22,7 +22,7 @@ var warnedOnce = false;
 function roundWithDeprecationWarning(value) {
   if (process.env.NODE_ENV !== 'production') {
     if (!warnedOnce) {
-      console.warn(['Qodev-UI: The `theme.typography.round` helper is deprecated.', 'Head to https://mui.com/r/migration-v4/#theme for a migration path.'].join('\n'));
+      console.warn(['Qodev-UI: The `theme.typography.round` helper is deprecated.'].join('\n'));
       warnedOnce = true;
     }
   }
@@ -34,13 +34,10 @@ var caseAllCaps = {
   textTransform: 'uppercase'
 };
 var defaultFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
-/**
- * @see @link{https://material.io/design/typography/the-type-system.html}
- * @see @link{https://material.io/design/typography/understanding-typography.html}
- */
 
-function createTypography(palette, typography) {
-  var _ref = typeof typography === 'function' ? typography(palette) : typography,
+
+function createText(palette, text) {
+  var _ref = typeof text === 'function' ? text(palette) : text,
       _ref$fontFamily = _ref.fontFamily,
       fontFamily = _ref$fontFamily === void 0 ? defaultFontFamily : _ref$fontFamily,
       _ref$fontSize = _ref.fontSize,
@@ -55,9 +52,9 @@ function createTypography(palette, typography) {
       fontWeightBold = _ref$fontWeightBold === void 0 ? 700 : _ref$fontWeightBold,
       _ref$htmlFontSize = _ref.htmlFontSize,
       htmlFontSize = _ref$htmlFontSize === void 0 ? 16 : _ref$htmlFontSize,
-      allVariants = _ref.allVariants,
+      allDesigns = _ref.allDesigns,
       pxToRem2 = _ref.pxToRem,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"]);
+      other = (0, _objectWithoutProperties2.default)(_ref, ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allDesigns", "pxToRem"]);
 
   if (process.env.NODE_ENV !== 'production') {
     if (typeof fontSize !== 'number') {
@@ -75,7 +72,7 @@ function createTypography(palette, typography) {
     return "".concat(size / htmlFontSize * coef, "rem");
   };
 
-  var buildVariant = function buildVariant(fontWeight, size, lineHeight, letterSpacing, casing) {
+  var buildDesign = function buildDesign(fontWeight, size, lineHeight, letterSpacing, casing) {
     return (0, _extends2.default)({
       fontFamily: fontFamily,
       fontWeight: fontWeight,
@@ -84,23 +81,23 @@ function createTypography(palette, typography) {
       lineHeight: lineHeight
     }, fontFamily === defaultFontFamily ? {
       letterSpacing: "".concat(round(letterSpacing / size), "em")
-    } : {}, casing, allVariants);
+    } : {}, casing, allDesigns);
   };
 
-  var variants = {
-    h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
-    h2: buildVariant(fontWeightLight, 60, 1.2, -0.5),
-    h3: buildVariant(fontWeightRegular, 48, 1.167, 0),
-    h4: buildVariant(fontWeightRegular, 34, 1.235, 0.25),
-    h5: buildVariant(fontWeightRegular, 24, 1.334, 0),
-    h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
-    subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
-    subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
-    body1: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
-    body2: buildVariant(fontWeightRegular, 14, 1.43, 0.15),
-    button: buildVariant(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
-    caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
-    overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps)
+  var designs = {
+    h1: buildDesign(fontWeightLight, 96, 1.167, -1.5),
+    h2: buildDesign(fontWeightLight, 60, 1.2, -0.5),
+    h3: buildDesign(fontWeightRegular, 48, 1.167, 0),
+    h4: buildDesign(fontWeightRegular, 34, 1.235, 0.25),
+    h5: buildDesign(fontWeightRegular, 24, 1.334, 0),
+    h6: buildDesign(fontWeightMedium, 20, 1.6, 0.15),
+    subtitle1: buildDesign(fontWeightRegular, 16, 1.75, 0.15),
+    subtitle2: buildDesign(fontWeightMedium, 14, 1.57, 0.1),
+    body1: buildDesign(fontWeightRegular, 16, 1.5, 0.15),
+    body2: buildDesign(fontWeightRegular, 14, 1.43, 0.15),
+    button: buildDesign(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
+    caption: buildDesign(fontWeightRegular, 12, 1.66, 0.4),
+    overline: buildDesign(fontWeightRegular, 12, 2.66, 1, caseAllCaps)
   };
   return (0, _utils.deepmerge)((0, _extends2.default)({
     htmlFontSize: htmlFontSize,
@@ -113,7 +110,7 @@ function createTypography(palette, typography) {
     fontWeightRegular: fontWeightRegular,
     fontWeightMedium: fontWeightMedium,
     fontWeightBold: fontWeightBold
-  }, variants), other, {
+  }, designs), other, {
     clone: false // No need to clone deep
 
   });

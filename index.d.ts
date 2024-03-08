@@ -59,5 +59,5 @@ export * from "./styles";
 
 export * from "./utils";
 
-export { default as Typography } from "./Typography";
-export * from "./Typography";
+export { default as Text } from "./Text";
+export * from "./Text";

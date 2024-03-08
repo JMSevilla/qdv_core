@@ -85,8 +85,8 @@ export const styles = theme => ({
     whiteSpace: 'nowrap'
   },
 
-  /* Styles applied to the root element if `gutterBottom={true}`. */
-  gutterBottom: {
+  /* Styles applied to the root element if `spaceBottom={true}`. */
+  spaceBottom: {
     marginBottom: '0.35em'
   },
 
@@ -155,17 +155,17 @@ const Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref)
     color = 'initial',
     component,
     display = 'initial',
-    gutterBottom = false,
+    spaceBottom = false,
     noWrap = false,
     paragraph = false,
     variant = 'body1',
     variantMapping = defaultVariantMapping
   } = props,
-        other = _objectWithoutPropertiesLoose(props, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
+        other = _objectWithoutPropertiesLoose(props, ["align", "classes", "className", "color", "component", "display", "spaceBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
 
   const Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
   return /*#__PURE__*/React.createElement(Component, _extends({
-    className: clsx(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes[`color${capitalize(color)}`], noWrap && classes.noWrap, gutterBottom && classes.gutterBottom, paragraph && classes.paragraph, align !== 'inherit' && classes[`align${capitalize(align)}`], display !== 'initial' && classes[`display${capitalize(display)}`]),
+    className: clsx(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes[`color${capitalize(color)}`], noWrap && classes.noWrap, spaceBottom && classes.spaceBottom, paragraph && classes.paragraph, align !== 'inherit' && classes[`align${capitalize(align)}`], display !== 'initial' && classes[`display${capitalize(display)}`]),
     ref: ref
   }, other));
 });
@@ -213,7 +213,7 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
   /**
    * If `true`, the text will have a bottom margin.
    */
-  gutterBottom: PropTypes.bool,
+  spaceBottom: PropTypes.bool,
 
   /**
    * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.

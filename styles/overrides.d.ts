@@ -1,5 +1,5 @@
 import { CSSProperties, StyleRules } from "./withStyles";
-import { TypographyClassKey } from "../Typography";
+import { TypographyClassKey } from "../Text";
 
 export type Overrides = {
   [Name in keyof ComponentNameToClassKey]?: Partial<

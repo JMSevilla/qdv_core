@@ -8,8 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "default", {
   enumerable: true,
   get: function get() {
-    return _Typography.default;
+    return _Text.default;
   }
 });
 
-var _Typography = _interopRequireDefault(require("./Typography"));
+var _Text = _interopRequireDefault(require("./Text"));

@@ -1,16 +1,16 @@
-import { Breakpoints, BreakpointsOptions } from './createBreakpoints';
-import { Mixins, MixinsOptions } from './createMixins';
-import { Palette, PaletteOptions } from './createPalette';
-import { Typography, TypographyOptions } from './createTypography';
-import { Shadows } from './shadows';
-import { Shape, ShapeOptions } from './shape';
-import { Spacing, SpacingOptions } from './createSpacing';
-import { Transitions, TransitionsOptions } from './transitions';
-import { ZIndex, ZIndexOptions } from './zIndex';
-import { Overrides } from './overrides';
-import { ComponentsProps } from './props';
+import { Breakpoints, BreakpointsOptions } from "./createBreakpoints";
+import { Mixins, MixinsOptions } from "./createMixins";
+import { Palette, PaletteOptions } from "./createPalette";
+import { Typography, TypographyOptions } from "./createText";
+import { Shadows } from "./shadows";
+import { Shape, ShapeOptions } from "./shape";
+import { Spacing, SpacingOptions } from "./createSpacing";
+import { Transitions, TransitionsOptions } from "./transitions";
+import { ZIndex, ZIndexOptions } from "./zIndex";
+import { Overrides } from "./overrides";
+import { ComponentsProps } from "./props";
 
-export type Direction = 'ltr' | 'rtl';
+export type Direction = "ltr" | "rtl";
 
 export interface ThemeOptions {
   shape?: ShapeOptions;
@@ -48,6 +48,12 @@ export interface Theme {
  * @deprecated
  * Use `import { createTheme } from '@material-ui/core/styles'` instead.
  */
-export function createMuiTheme(options?: ThemeOptions, ...args: object[]): Theme;
+export function createMuiTheme(
+  options?: ThemeOptions,
+  ...args: object[]
+): Theme;
 
-export default function createTheme(options?: ThemeOptions, ...args: object[]): Theme;
+export default function createTheme(
+  options?: ThemeOptions,
+  ...args: object[]
+): Theme;

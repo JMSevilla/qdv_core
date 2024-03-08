@@ -1,5 +1,5 @@
 {
   "sideEffects": false,
-  "module": "../esm/Typography/index.js",
+  "module": "../esm/Text/index.js",
   "typings": "./index.d.ts"
 }

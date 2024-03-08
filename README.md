@@ -39,7 +39,7 @@ import ReactDOM from "react-dom";
 import Button from "@qodev/core/Text";
 
 function App() {
-  return <Text design="h1">Hello World</Text>;
+  return <Text variant="h1">Hello World</Text>;
 }
 
 ReactDOM.render(<App />, document.querySelector("#app"));

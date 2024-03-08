@@ -86,8 +86,8 @@ export var styles = function styles(theme) {
       whiteSpace: 'nowrap'
     },
 
-    /* Styles applied to the root element if `gutterBottom={true}`. */
-    gutterBottom: {
+    /* Styles applied to the root element if `spaceBottom={true}`. */
+    spaceBottom: {
       marginBottom: '0.35em'
     },
 
@@ -159,8 +159,8 @@ var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
       component = props.component,
       _props$display = props.display,
       display = _props$display === void 0 ? 'initial' : _props$display,
-      _props$gutterBottom = props.gutterBottom,
-      gutterBottom = _props$gutterBottom === void 0 ? false : _props$gutterBottom,
+      _props$spaceBottom = props.spaceBottom,
+      spaceBottom = _props$spaceBottom === void 0 ? false : _props$spaceBottom,
       _props$noWrap = props.noWrap,
       noWrap = _props$noWrap === void 0 ? false : _props$noWrap,
       _props$paragraph = props.paragraph,
@@ -169,11 +169,11 @@ var Typography = /*#__PURE__*/React.forwardRef(function Typography(props, ref) {
       variant = _props$variant === void 0 ? 'body1' : _props$variant,
       _props$variantMapping = props.variantMapping,
       variantMapping = _props$variantMapping === void 0 ? defaultVariantMapping : _props$variantMapping,
-      other = _objectWithoutProperties(props, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
+      other = _objectWithoutProperties(props, ["align", "classes", "className", "color", "component", "display", "spaceBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
 
   var Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
   return /*#__PURE__*/React.createElement(Component, _extends({
-    className: clsx(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat(capitalize(color))], noWrap && classes.noWrap, gutterBottom && classes.gutterBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(capitalize(align))], display !== 'initial' && classes["display".concat(capitalize(display))]),
+    className: clsx(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat(capitalize(color))], noWrap && classes.noWrap, spaceBottom && classes.spaceBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(capitalize(align))], display !== 'initial' && classes["display".concat(capitalize(display))]),
     ref: ref
   }, other));
 });
@@ -221,7 +221,7 @@ process.env.NODE_ENV !== "production" ? Typography.propTypes = {
   /**
    * If `true`, the text will have a bottom margin.
    */
-  gutterBottom: PropTypes.bool,
+  spaceBottom: PropTypes.bool,
 
   /**
    * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
