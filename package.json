@@ -1,0 +1,45 @@
+{
+  "name": "@qodev/core",
+  "version": "4.12.4",
+  "private": false,
+  "author": "Qodev-UI Team",
+  "description": "React components that implement Google's Qodev Design.",
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "peerDependencies": {
+    "@types/react": "^16.8.6 || ^17.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "@qodev/styles": "^4.11.5",
+    "@qodev/system": "^4.12.2",
+    "@qodev/types": "5.1.0",
+    "@qodev/utils": "^4.11.3",
+    "@types/react-transition-group": "^4.2.0",
+    "clsx": "^1.0.4",
+    "hoist-non-react-statics": "^3.3.2",
+    "popper.js": "1.16.1-lts",
+    "prop-types": "^15.7.2",
+    "react-is": "^16.8.0 || ^17.0.0",
+    "react-transition-group": "^4.4.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "main": "./index.js",
+  "module": "./esm/index.js",
+  "typings": "./index.d.ts"
+}
