@@ -13,10 +13,10 @@ export var styles = function styles(theme) {
     },
 
     /* Styles applied to the root element if `variant="body2"`. */
-    default2: theme.text.default2,
+    body2: theme.text.body2,
 
     /* Styles applied to the root element if `variant="body1"`. */
-    default1: theme.text.default1,
+    body1: theme.text.body1,
 
     /* Styles applied to the root element if `variant="caption"`. */
     caption: theme.text.caption,
@@ -146,8 +146,8 @@ var defaultDesignMapping = {
   h6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
-  default1: 'p',
-  default2: 'p'
+  body1: 'p',
+  body2: 'p'
 };
 var Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   var _props$align = props.align,
@@ -239,7 +239,7 @@ process.env.NODE_ENV !== "production" ? Text.propTypes = {
   /**
    * Applies the theme text styles.
    */
-  design: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'default1', 'default2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
+  design: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'caption', 'button', 'overline', 'srOnly', 'inherit']),
 
   /**
    * The component maps the design prop to a range of different HTML element types.

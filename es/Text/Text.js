@@ -144,8 +144,8 @@ const defaultDesignMapping = {
   h6: 'h6',
   subtitle1: 'h6',
   subtitle2: 'h6',
-  default1: 'p',
-  default2: 'p'
+  body1: 'p',
+  body2: 'p'
 };
 const Text = /*#__PURE__*/React.forwardRef(function Text(props, ref) {
   const {
