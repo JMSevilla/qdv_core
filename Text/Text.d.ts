@@ -7,7 +7,7 @@ import {
 } from "../OverridableComponent";
 import { Design as ThemeDesign } from "../styles/createText";
 
-type Variant = ThemeDesign | "srOnly";
+type Design = ThemeDesign | "srOnly";
 
 export interface TextTypeMap<P = {}, D extends React.ElementType = "span"> {
   props: P & {
@@ -28,8 +28,8 @@ export interface TextTypeMap<P = {}, D extends React.ElementType = "span"> {
     spaceBottom?: boolean;
     noWrap?: boolean;
     paragraph?: boolean;
-    variant?: Variant | "inherit";
-    variantMapping?: Partial<Record<Variant, string>>;
+    design?: Design | "inherit";
+    designMapping?: Partial<Record<Design, string>>;
   };
   defaultComponent: D;
   classKey: TextClassKey;
