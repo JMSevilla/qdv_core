@@ -10,6 +10,14 @@
 
 > Text Component - This component represent as the text content of the application.
 
+## Upcoming components for release v2.4.0
+
+> Button Component - Upcoming component
+> Card Component - Upcoming component
+> Box Component - Upcoming component
+> Chip Component - Upcoming component
+> Container - Upcoming component
+
 <div align="center">
 
 [React](https://reactjs.org/) components for faster and simpler web development. Build your own design system.

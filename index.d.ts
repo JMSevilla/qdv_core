@@ -61,3 +61,8 @@ export * from "./utils";
 
 export { default as Text } from "./Text";
 export * from "./Text";
+
+export { default as ButtonBase } from "./ButtonBase";
+export * from "./ButtonBase";
+export { default as Button } from "./Button";
+export * from "./Button";
