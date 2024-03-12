@@ -10,7 +10,7 @@
 
 > Text Component - This component represent as the text content of the application.
 
-## Upcoming components for release v2.4.0
+## Upcoming components for release v2.3.14
 
 > Button Component - Upcoming component
 > Card Component - Upcoming component
