@@ -74,6 +74,31 @@ export var qdvstyles = function qdvstyles(theme) {
               boxShadow: '0 0 0 2px rgba(79, 70, 229, 0.5)',
             },
         },
+        socialFB: {
+          color: '#ffffff',
+          backgroundColor: '#3b5998',
+          '&:hover': {
+            backgroundColor: 'rgba(59, 89, 152, 0.9)', // 90% opacity
+          },
+          '&:focus': {
+            outline: 'none',
+            ring: '4px solid rgba(59, 89, 152, 0.5)', // 50% opacity
+          },
+          '&:focus-visible': {
+            outline: 'none',
+            ring: '4px solid rgba(59, 89, 152, 0.55)', // 55% opacity
+          },
+          fontWeight: 500,
+          borderRadius: '0.375rem',
+          fontSize: '0.875rem',
+          paddingX: '1.25rem',
+          paddingY: '0.9375rem',
+          textAlign: 'center',
+          display: 'inline-flex',
+          alignItems: 'center',
+          marginRight: '0.5rem',
+          marginBottom: '0.5rem',
+        },
         default: {
             display: 'flex',
             justifyContent: 'center',
@@ -184,6 +209,66 @@ export var qdvstyles = function qdvstyles(theme) {
               boxShadow: '0 0 0 2px rgba(79, 70, 229, 0.5)',
             },
         },
+        green: {
+          display: 'flex',
+          justifyContent: 'center',
+          borderRadius: '0.375rem',
+          backgroundColor: '#047857',
+          paddingLeft: '0.75rem',
+          paddingRight: '0.75rem',
+          paddingTop: '0.375rem',
+          paddingBottom: '0.375rem',
+          fontSize: '0.875rem',
+          fontWeight: 600,
+          lineHeight: '1.5rem',
+          color: '#ffffff',
+          boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+          '&:hover': {
+            backgroundColor: '#065F46',
+          },
+          '&:focus': {
+            outline: '2px solid transparent',
+            outlineOffset: '2px',
+          },
+          '&:focus-visible': {
+            '--tw-ring-color': '#4f46e5',
+            '--tw-ring-offset-color': '#4f46e5',
+            boxShadow: '0 0 0 2px rgba(79, 70, 229, 0.5)',
+          },
+      },
+      GDPurpleToBlue: {
+        display: 'flex',
+        justifyContent: 'center',
+        borderRadius: '0.375rem',
+        backgroundColor: '#047857',
+        paddingLeft: '0.75rem',
+        paddingRight: '0.75rem',
+        paddingTop: '0.375rem',
+        paddingBottom: '0.375rem',
+        fontSize: '0.875rem',
+        fontWeight: 600,
+        lineHeight: '1.5rem',
+        color: '#ffffff',
+        backgroundImage: 'linear-gradient(to bottom right, #9F7AEA, #3B82F6)',
+        '&:hover': {
+          backgroundImage: 'linear-gradient(to bottom left, #9F7AEA, #3B82F6)',
+        },
+        boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        '&:focus': {
+            outline: 'none',
+            ring: '4px solid #81E6D9',
+          },
+          '&:focus-visible': {
+            outline: 'none',
+            ring: '4px solid #81E6D9',
+            dark: {
+              ring: '4px solid #1E40AF',
+            },
+          },
+          '&:hover': {
+            backgroundImage: 'linear-gradient(to bottom left, #9F7AEA, #3B82F6)',
+          },
+    },
         disableElevation: {
             boxShadow: 'none',
             '&:hover': {
@@ -308,9 +393,11 @@ var Button = /*#__PURE__*/React.forwardRef(function Button(props, ref){
       design = _props$design === void 0 ? 'text' : _props$design,
       other = _objectWithoutProperties2(props, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "design"]);
 
+    /* issue found - socialMedia SVG don't show */
     var startIcon = startIconProp && /*#__PURE__*/React.createElement("span", {
         className: clsx(classes.startIcon, classes["iconSize".concat(capitalize(size))])
     }, startIconProp);
+    
     var endIcon = endIconProp && /*#__PURE__*/React.createElement("span", {
         className: clsx(classes.endIcon, classes["iconSize".concat(capitalize(size))])
     }, endIconProp);
@@ -345,7 +432,7 @@ process.env.NODE_ENV !== "production" ? Button.propTypes = {
     size: PropTypes.oneOf(['large', 'medium', 'small']),
     startIcon: PropTypes.node,
     type: PropTypes.oneOfType([PropTypes.oneOf(['button', 'reset', 'submit']), PropTypes.string]),
-    design: PropTypes.oneOf(['default', 'alternative', 'dark', 'light', 'purple'])
+    design: PropTypes.oneOf(['default', 'alternative', 'dark', 'light', 'green', 'purple', 'GDPurpleToBlue', 'socialFB'])
 }: void 0;
 export default withStyles(qdvstyles, {
     name: 'QdvButton'
