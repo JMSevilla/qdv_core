@@ -52,7 +52,16 @@ export type ButtonTypeMap<
     /**
      * The designs to use.
      */
-    design?: "default" | "alternative" | "dark" | "light" | "purple";
+    design?:
+      | "default"
+      | "alternative"
+      | "dark"
+      | "light"
+      | "green"
+      | "purple"
+      | "GDPurpleToBlue"
+      /* @deprecated socialFB will enhance on v8 */
+      | "socialFB";
   };
   defaultComponent: D;
   classKey: ButtonClassKey;
