@@ -10,7 +10,9 @@ var _exportNames = {
   colors: true,
   Text: true,
   ButtonBase: true,
-  Button: true
+  Button: true,
+  Paper: true,
+  Card: true
 };
 
 Object.defineProperty(exports, "ButtonBase", {
@@ -26,6 +28,20 @@ Object.defineProperty(exports, "Button", {
     return _Button.default;
   }
 });
+
+Object.defineProperty(exports, "Paper", {
+  enumerable: true,
+  get: function get() {
+    return _Paper.default;
+  }
+});
+
+Object.defineProperty(exports, "Card", {
+  enumerable: true,
+  get: function get() {
+    return _Card.default;
+  }
+})
 
 var _Text = _interopRequireWildcard(require("./Text"));
 
@@ -64,4 +80,30 @@ Object.keys(_Button).forEach(function (key) {
       return _Button[key];
     }
   });
+})
+
+var _Paper = _interopRequireWildcard(require("./Paper"));
+
+Object.keys(_Paper).forEach(function (key) {
+  if(key === "default" || key === "__esModule") return;
+  if(Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Paper[key];
+    }
+  })
+});
+
+var _Card = _interopRequireWildcard(require("./Card"));
+
+Object.keys(_Card).forEach(function (key) {
+  if(key === "default" || key === "__esModule") return;
+  if(Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Card[key];
+    }
+  })
 })

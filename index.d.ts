@@ -66,3 +66,7 @@ export { default as ButtonBase } from "./ButtonBase";
 export * from "./ButtonBase";
 export { default as Button } from "./Button";
 export * from "./Button";
+export { default as Paper } from "./Paper";
+export * from "./Paper";
+export { default as Card } from "./Card";
+export * from "./Card";
