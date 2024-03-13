@@ -12,7 +12,8 @@ var _exportNames = {
   ButtonBase: true,
   Button: true,
   Paper: true,
-  Card: true
+  Card: true,
+  Contain: true
 };
 
 Object.defineProperty(exports, "ButtonBase", {
@@ -40,6 +41,13 @@ Object.defineProperty(exports, "Card", {
   enumerable: true,
   get: function get() {
     return _Card.default;
+  }
+})
+
+Object.defineProperty(exports, "Contain", {
+  enumerable: true,
+  get: function get() {
+    return _Contain.default;
   }
 })
 
@@ -104,6 +112,19 @@ Object.keys(_Card).forEach(function (key) {
     enumerable: true,
     get: function get() {
       return _Card[key];
+    }
+  })
+})
+
+var _Contain = _interopRequireWildcard(require("./Contain"));
+
+Object.keys(_Contain).forEach(function (key) {
+  if(key === "default" || key === "__esModule") return;
+  if(Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _Contain[key];
     }
   })
 })

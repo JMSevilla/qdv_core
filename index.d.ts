@@ -70,3 +70,5 @@ export { default as Paper } from "./Paper";
 export * from "./Paper";
 export { default as Card } from "./Card";
 export * from "./Card";
+export { default as Contain } from "./Contain";
+export * from "./Contain";
