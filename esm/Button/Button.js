@@ -7,6 +7,7 @@ import withStyles from '../styles/withStyles'
 import { alpha } from '../styles/colorManipulator'
 import ButtonBase from '../ButtonBase'
 import capitalize from '../utils/capitalize';
+import FBIcon from '../qdv/svg-icons/FB'
 
 export var qdvstyles = function qdvstyles(theme) {
     return {
@@ -393,8 +394,12 @@ var Button = /*#__PURE__*/React.forwardRef(function Button(props, ref){
       design = _props$design === void 0 ? 'text' : _props$design,
       other = _objectWithoutProperties2(props, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "design"]);
 
-    /* issue found - socialMedia SVG don't show */
-    var startIcon = startIconProp && /*#__PURE__*/React.createElement("span", {
+    /* issue found - socialMedia SVG don't show -> solved */
+    var startIcon = design === "socialFB" ? /*#__PURE__*/React.createElement("span", {
+      className: clsx(classes.startIcon, classes["iconSize".concat(capitalize(size))])
+    }, /*#__PURE__*/React.createElement(FBIcon, {
+      className: clsx(classes.startIcon, classes["iconSize".concat(capitalize(size))])
+    })) : startIconProp && /*#__PURE__*/React.createElement("span", {
         className: clsx(classes.startIcon, classes["iconSize".concat(capitalize(size))])
     }, startIconProp);
     
