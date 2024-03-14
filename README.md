@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#" rel="noopener" target="_blank"><img width="400" src="https://github.com/JMSevilla/qodev-core/blob/master/assets/qodevui.png" alt="QODEV-UI logo"></a></p>
+  <a href="#" rel="noopener" target="_blank"><img width="400" src="https://github.com/JMSevilla/qodev-core/blob/master/assets/qdvui.png" alt="QODEV-UI logo"></a></p>
 </p>
 
 <h1 align="center">Qodev UI Framework</h1>
