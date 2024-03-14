@@ -10,6 +10,26 @@
 
 > Text Component - This component represent as the text content of the application.
 
+## New components for release v2.3.14
+
+> Button Component - Upcoming component
+> Card Component - Upcoming component
+> Contain Component - Upcoming component
+> Tag Component - Upcoming component
+> Container - Upcoming component
+
+## EcmaSript Module Components Availability v2.3.14
+
+> Button Component - Upcoming component
+> Card Component - Upcoming component
+> Contain Component - Upcoming component
+> Tag Component - Upcoming component
+> Container - Upcoming component
+
+## React version compatability
+
+> v17 or higher
+
 <div align="center">
 
 [React](https://reactjs.org/) components for faster and simpler web development. Build your own design system.
@@ -25,6 +45,11 @@ Qodev-UI is available as an [npm package](https://www.npmjs.com/package/@qodev/c
 npm install @qodev/core
 ```
 
+```sh
+// with npm
+npm install @qodev/core --force
+```
+
 Currently the qodev documentation system is under development
 
 ### There is more!
@@ -36,7 +61,7 @@ Here is a quick example to get you started, **it's all you need**:
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "@qodev/core/Text";
+import Text from "@qodev/core/Text";
 
 function App() {
   return <Text variant="h1">Hello World</Text>;
