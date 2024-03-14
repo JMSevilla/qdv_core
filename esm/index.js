@@ -24,3 +24,5 @@ export { default as Tag } from './Tag'
 export * from './Tag'
 export { default as Container } from './Container'
 export * from './Container'
+export { default as SvgIcon } from './SvgIcon';
+export * from './SvgIcon';

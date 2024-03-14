@@ -1,9 +1,9 @@
 {
   "name": "@qodev/core",
-  "version": "2.4.14",
+  "version": "2.4.15",
   "private": false,
   "author": "Qodev-UI Team",
-  "description": "React components that implement Google's Qodev Design.",
+  "description": "React components that implement Qodev Design.",
   "keywords": [
     "react",
     "react-component"

@@ -15,7 +15,8 @@ var _exportNames = {
   Card: true,
   Contain: true,
   Tag: true,
-  Container: true
+  Container: true,
+  SvgIcon: true,
 };
 
 Object.defineProperty(exports, "ButtonBase", {
@@ -66,6 +67,12 @@ Object.defineProperty(exports, "Container", {
     return _Container.default;
   }
 })
+Object.defineProperty(exports, "SvgIcon", {
+  enumerable: true,
+  get: function get() {
+    return _SvgIcon.default;
+  }
+});
 
 var _Text = _interopRequireWildcard(require("./Text"));
 
@@ -170,3 +177,16 @@ Object.keys(_Container).forEach(function (key) {
     }
   })
 })
+
+var _SvgIcon = _interopRequireWildcard(require("./SvgIcon"));
+
+Object.keys(_SvgIcon).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _SvgIcon[key];
+    }
+  });
+});
