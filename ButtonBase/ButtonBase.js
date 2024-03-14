@@ -97,7 +97,7 @@ var ButtonBase = /*#__PURE__*/React.forwardRef(function ButtonBase(props, ref) {
         centerRipple = _props$centerRipple === void 0 ? false : _props$centerRipple,
         children = props.children,
         classes = props.classes,
-        className = proops.className,
+        className = props.className,
         _props$component = props.component,
         component = _props$component === void 0 ? 'button' : _props$component,
         _props$disabled = props.disabled,
