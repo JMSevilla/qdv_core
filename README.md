@@ -4,27 +4,27 @@
 
 <h1 align="center">Qodev UI Framework</h1>
 
-> Qodev v1 is out! This library is only available for NPM ✨.
+> Qodev v2 is out! This library is only available for NPM ✨.
 
-## Available components for release v1
+## New components for release v2.4.14
 
-> Text Component - This component represent as the text content of the application.
+<ul>
+  <li>Button Component</li>
+  <li>Card Component</li>
+  <li>Contain Component</li>
+  <li>Tag Component</li>
+  <li>Container Component</li>
+</ul>
 
-## New components for release v2.3.14
+## EcmaScript Module Components Availability v2.4.14
 
-> Button Component - Upcoming component
-> Card Component - Upcoming component
-> Contain Component - Upcoming component
-> Tag Component - Upcoming component
-> Container - Upcoming component
-
-## EcmaSript Module Components Availability v2.3.14
-
-> Button Component - Upcoming component
-> Card Component - Upcoming component
-> Contain Component - Upcoming component
-> Tag Component - Upcoming component
-> Container - Upcoming component
+<ul>
+  <li>Button Component</li>
+  <li>Card Component</li>
+  <li>Contain Component</li>
+  <li>Tag Component</li>
+  <li>Container Component</li>
+</ul>
 
 ## React version compatability
 
