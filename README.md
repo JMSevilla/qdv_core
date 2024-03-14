@@ -6,7 +6,7 @@
 
 > Qodev v2 is out! This library is only available for NPM ✨.
 
-## New components for release v2.4.14
+## New components for release v2.4.16
 
 <ul>
   <li>Button Component</li>
@@ -16,7 +16,7 @@
   <li>Container Component</li>
 </ul>
 
-## EcmaScript Module Components Availability v2.4.14
+## EcmaScript Module Components Availability v2.4.16
 
 <ul>
   <li>Button Component</li>
